@@ -1,0 +1,223 @@
+/*
+########### CSS Index ###########
+
+#- I)  Re usable class
+#-- 1°) Position
+#-- 2°) Color
+#-- 3°) Size
+#-- 4°) Effect
+#-- 5°) Font
+
+#- II) Unique ID style
+
+#- III)Responsive style
+#-- 1°) Desktop view
+#-- 2°) Digital Tablet view
+#-- 3°) Smartphone view
+*/
+
+/* #- I) Re usable class */
+/* #-- 1°) Position      */
+.child-center_right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+}
+.child-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.child-center_left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.text-center{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.child-wrap{
+  flex-wrap: wrap;
+}
+
+.div-absolute{
+   position: absolute;
+}
+.div-fixed{
+  position: fixed;
+}
+
+/* #-- 2°) Color */
+.background-car{
+  background-image:url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.background-generic_color{
+    background-color: #8B6871;
+}
+
+.text-white{
+  color: white;
+}
+
+/* #-- 3°) Size */
+.div-full_window{
+  width: 100vw;
+  height: 100vh;
+}
+.div-full_width{
+  width: 100%;
+}
+
+.div-no_spaces{
+  border: 0px;
+	padding:  0px; margin:  0px;
+}
+
+.a_social_media-size{
+	width:5%;
+	padding: 0px; margin: 0% 1.5% 0% 1.5%;
+}
+.a_nav_bar-size{
+	font-size: 150%;
+	padding:  0px; margin: 0% 5% 0% 0%;
+}
+
+/* #-- 4°) Effect */
+.div-white_shadow{
+  	box-shadow: 12px 12px 2px 1px rgba(255, 255, 255, 0.8);
+}
+.div-reverse_white_shadow{
+  	box-shadow: -12px -12px 2px 1px rgba(255, 255, 255, 0.3);
+}
+
+.div-little_round_border {
+	border-radius: 4px;
+}
+.img-big_round_border {
+	border-radius: 10%;
+}
+
+/* #-- 5°) Font */
+.text-font_Lato{
+	font-family: Lato;
+}
+.text-double_size{
+	font-size: 200%;
+}
+.text-underline_effect{
+  text-decoration: none;
+  background: linear-gradient(to top, #8B6871 0%, #8B6871 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+	transition: background-size 0.5s;
+	transition: all 0.5s ease-out;
+}
+.text-underline_effect:hover{
+background-size: 100% 100%;
+}
+
+/* #- II) Unique ID style */
+#container-card_profil{
+	width: 90%;
+	height: 50%;
+}
+#divider {
+	height: 2px;
+	background: radial-gradient(white, #8B6871);
+	padding:  0px; margin: 3% 0% 3% 0%;
+}
+#container_passions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+#logo{
+  width: 10vw;
+	height: 10vw;
+  padding:  0px; margin: 0px 0px 0px 1vw;
+}
+
+/* #- III)Responsive style   */
+/* #-- 1°) Desktop view */
+@media (min-width: 720px){
+	/* Photo de profil */
+	#photo_profil{
+		width: 276px;
+		height: 276px;
+		padding:  0px; margin:  0% 0% 0% 1%;
+	}
+
+	/* Passions */
+	#container_passions{
+	  flex-wrap: nowrap;
+	}
+	.passion_card-size {
+		width: 25%;
+		padding: 0px; margin: 4%;
+	}
+	.passion_card_img-size {
+		width: 15vw;
+		height: 15vw;
+	}
+}
+
+/* #-- 2°) Digital Tablet view */
+@media (max-width: 720px){
+	/* Photo de profil */
+	#photo_profil{
+		width: 226px;
+		height: 226px;
+		padding:  0px; margin:  0% 0% 0% 1%;
+	}
+
+  /* Passions */
+  #container_passions{
+    flex-wrap: wrap;
+  }
+  .passion_card-size {
+    width: 80%;
+    padding: 0px; margin: 4%;
+  }
+  .passion_card_img-size {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+/* #-- 3°) Smartphone view */
+@media (max-width: 540px){
+	/* Photo de profil */
+	#photo_profil{
+		width: 126px;
+		height: 126px;
+		padding:  0px; margin:  0% 0% 0% 1%;
+	}
+
+	/* Passions */
+	#container_passions{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+		flex-wrap: wrap;
+	}
+	#container_passions > div > p{
+		font-size: 150%;
+	}
+	.passion_card-size {
+		width: 80%;
+		padding: 0px; margin: 4%;
+	}
+	.passion_card_img-size {
+		width: 50vw;
+		height: 50vw;
+	}
+}
